@@ -12,6 +12,7 @@ gem 'rails', '~> 5.1.6'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
+gem 'webpacker', '~> 3.4'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'

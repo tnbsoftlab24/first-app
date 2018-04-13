@@ -43,8 +43,8 @@ Rails.application.configure do
     domain: Rails.application.secrets.domain_name,
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: "magengogut@gmail.com"
-    password: "nou25@4tnb"
+    user_name: 'magengogut@gmail.com'
+    password: 'nou25@4tnb'
   }
   # ActionMailer Config
   config.action_mailer.default_url_options = { :host => Rails.application.secrets.domain_name }

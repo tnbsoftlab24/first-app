@@ -6,13 +6,14 @@ class ProductsController < ApplicationController
     end
 
     def new
-      if Shop.first.nil?
-        redirect_to new_shop_path
-      else
-        @product = Product.new
-      end
-    end
-    
+     
+        if current_user.shops.first.nil?
+          redirect_to new_shop_path
+        else
+          @product = Product.new
+        end
+   end
+
 
     def show
     end

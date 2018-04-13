@@ -1,11 +1,16 @@
 class ProductsController < ApplicationController
-
+  before_action :set_product, only: [:show, :edit, :update, :destroy]
+  
     def index
         @products = Product.all
     end
 
     def new
+      if Shop.first.nil?
+        redirect_to new_shop_path
+      else
         @product = Product.new
+      end
     end
     
 
@@ -57,7 +62,7 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :description)
+      params.require(:product).permit(:name, :description,:shop_id)
     end
 
 end 

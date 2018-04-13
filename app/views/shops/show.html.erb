@@ -41,20 +41,20 @@
 
               <p>
                 <strong>Name:</strong>
-                <%= @product.name %>
+                <%= @shop.name %>
               </p>
 
               <p>
                 <strong>Description:</strong>
-                <%= @product.description %>
+                <%= @shop.description %>
               </p>
 
              
             <br>
          
            <div class="text-center">
-            <%= link_to 'Edit', edit_product_path(@product),:class => "btn btn-primary text-white" %> |
-            <%= link_to 'Back', products_path,:class => "btn btn-primary text-white" %>
+            <%= link_to 'Edit', edit_shop_path(@shop),:class => "btn btn-primary text-white" %> |
+            <%= link_to 'Back', shops_path,:class => "btn btn-primary text-white" %>
            </div>
         </div>
     </div>

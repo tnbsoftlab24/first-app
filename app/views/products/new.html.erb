@@ -3,12 +3,12 @@
         <div class=" col-md-4 offset-md-4 mt-4">
             <h1>Nouveau Produit</h1>
 
-            <%= render 'shared/form'%>
+            <%= render 'shared/products_form'%>
 
         
             <br>
-            <%= link_to 'Modifier',modifier_path,:class => "btn btn-primary text-white" %>
             <%= link_to 'Back', products_path,:class => "btn btn-primary text-white" %>
+           <%= link_to 'Creer Magasin', new_shop_path,:class => "btn btn-primary text-white" %>
         </div>
     </div>
 </div>

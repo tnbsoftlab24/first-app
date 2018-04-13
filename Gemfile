@@ -13,6 +13,8 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'webpacker', '~> 3.4'
+gem 'devise'
+gem 'devise_invitable', '~> 1.7.0'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
@@ -43,6 +45,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem "letter_opener"
 end
 
 group :development do

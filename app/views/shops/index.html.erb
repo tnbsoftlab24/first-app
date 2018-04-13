@@ -1,0 +1,34 @@
+<div class="container">
+    <div class=row>   
+        <div class="col col-md-8 offset-md-2 my-4">
+            <h1 class="text-center">Magasins</h1>
+            <table class="table">
+            <thead>
+                <tr>
+                <th>Nom</th>
+                <th>Description</th>
+                <th colspan="3"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @shops.each do |shop| %>
+                <tr>
+                    <td><%= shop.name %></td>
+                    <td><%= shop.description %></td>
+                    <td><%= link_to 'Show', shop ,:class => "btn btn-success text-white"%></td>
+                    <td><%= link_to 'Edit', edit_shop_path(shop),:class => "btn btn-warning text-white"%></td>
+                    <td><%= link_to 'Destroy', shop, method: :delete, data: { confirm: 'Are you sure?' },:class => "btn btn-danger text-white" %></td>
+                </tr>
+                <% end %>
+            </tbody>
+            </table>
+            <br>
+            <%= link_to 'Nouveau Magasin', new_shop_path,:class => "btn btn-primary text-white" %>
+            <%= link_to 'Nouveau Produit', new_product_path,:class => "btn btn-primary text-white" %>
+        </div>
+    </div>
+</div>
+
+<%# <div id="app">
+  {{ message }}
+</div> %>

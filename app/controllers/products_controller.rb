@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
   
     def index
         @products = Product.all
+        p "toto"
     end
 
     def new

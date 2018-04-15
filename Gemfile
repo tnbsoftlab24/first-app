@@ -15,6 +15,8 @@ gem 'jquery-rails'
 gem 'webpacker', '~> 3.4'
 gem 'devise'
 gem 'devise_invitable', '~> 1.7.0'
+gem 'foreman'
+gem 'figaro'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'

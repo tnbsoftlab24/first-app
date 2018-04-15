@@ -2,19 +2,14 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   
     def index
-        @products = Product.all
-        p "toto"
+      @products = Product.all
     end
 
     def new
-     
-        if current_user.shops.first.nil?
-          redirect_to new_shop_path
-        else
-          @product = Product.new
-        end
-   end
-
+   
+        @product = Product.new
+  
+    end
 
     def show
     end

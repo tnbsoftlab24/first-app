@@ -1,12 +1,12 @@
 class User < ApplicationRecord
-  has_many :products
+
   has_many :shops
   
   
   
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :invitable, :database_authenticatable, :registerable,
+  devise :invitable,:database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
          
   after_create :send_welcome_email  

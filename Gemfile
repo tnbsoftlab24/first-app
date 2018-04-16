@@ -17,7 +17,6 @@ gem 'devise'
 gem 'devise_invitable', '~> 1.7.0'
 gem 'foreman'
 gem 'figaro'
-gem 'devise_token_auth'
 gem "pundit"
 # Use Puma as the app server
 gem 'puma', '~> 3.7'

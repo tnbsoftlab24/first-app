@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="single-discussion-message">
+      <div class="card my-1">
+        <div class="card-body py-1">
+          <p>
+            <strong class="float-left"><%= comment.user.email %></strong>
+            <span class="text-muted float-right"><%= comment.created_at.strftime("%d %b, %r") %></span>
+          </p>
+          <div class="clearfix"></div>
+          <p><%= raw(comment.body) %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 <div class="container">
-    <div class=row>   
+    <div class=row>
         <div class="col col-md-8 offset-md-2 my-4">
             <h1 class="text-center">Magasins</h1>
             <table class="table">
@@ -11,7 +11,7 @@
                 </tr>
             </thead>
             <tbody>
-                <% current_user.@shops.each do |shop| %>
+                <% @shops.each do |shop| %>
                 <tr>
                     <td><%= shop.name %></td>
                     <td><%= shop.description %></td>

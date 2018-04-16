@@ -1,12 +1,12 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-  
+
     def index
         @products = Product.all
     end
 
     def new
-     
+
         if current_user.shops.first.nil?
           redirect_to new_shop_path
         else
@@ -16,6 +16,7 @@ class ProductsController < ApplicationController
 
 
     def show
+      @comment = Comment.new
     end
 
     def edit
@@ -23,7 +24,7 @@ class ProductsController < ApplicationController
 
     def create
         @product = Product.new(product_params)
-    
+        @product.user = current_user
         respond_to do |format|
           if @product.save
             format.html { redirect_to @product, notice: 'Product was successfully created.' }
@@ -63,7 +64,7 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :description,:shop_id)
+      params.require(:product).permit(:name, :description, :shop_id)
     end
 
-end 
+end

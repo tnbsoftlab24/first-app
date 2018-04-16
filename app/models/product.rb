@@ -1,9 +1,10 @@
 class Product < ApplicationRecord
   belongs_to :shop
- 
+  belongs_to :user
+  has_many :comments
 
     validates :name, presence: true
-    
+
     validate :date_time
 
     def date_time

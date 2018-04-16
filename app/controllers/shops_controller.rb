@@ -4,21 +4,25 @@ class ShopsController < ApplicationController
       def index
         @shops = Shop.all
       end
-  
+
       def new
          @shop = Shop.new
       end
-      
-  
+
+
       def show
       end
-  
+
       def edit
       end
-  
+
       def create
           @shop = Shop.new(shop_params)
           @shop.user = current_user
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0154f9f938c63f184433b9a55cc2507d8898fd3c
           respond_to do |format|
             if @shop.save
               format.html { redirect_to @shop, notice: 'Shop was successfully created.' }
@@ -29,7 +33,7 @@ class ShopsController < ApplicationController
             end
           end
       end
-  
+
       def update
           respond_to do |format|
             if @shop.update(shop_params)
@@ -41,7 +45,7 @@ class ShopsController < ApplicationController
             end
           end
       end
-  
+
       def destroy
           @shop.destroy
           respond_to do |format|
@@ -49,16 +53,16 @@ class ShopsController < ApplicationController
             format.json { head :no_content }
           end
       end
-  
+
       private
       # Use callbacks to share common setup or constraints between actions.
       def set_shop
         @shop = Shop.find(params[:id])
       end
-  
+
       # Never trust parameters from the scary internet, only allow the white list through.
       def shop_params
         params.require(:shop).permit(:name, :description, :user_id)
       end
-  
-  end 
+
+  end

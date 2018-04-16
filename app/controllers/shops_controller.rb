@@ -2,8 +2,7 @@ class ShopsController < ApplicationController
     before_action :set_shop, only: [:show, :edit, :update, :destroy]
 
       def index
-     
-          @shops = Shop.all
+        @shops = Shop.all
       end
   
       def new
@@ -19,7 +18,7 @@ class ShopsController < ApplicationController
   
       def create
           @shop = Shop.new(shop_params)
-      
+          @shop.user = current_user
           respond_to do |format|
             if @shop.save
               format.html { redirect_to @shop, notice: 'Shop was successfully created.' }
